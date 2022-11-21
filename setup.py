@@ -12,6 +12,7 @@ setup(
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/env-hooks', ['env-hooks/nubot.dsv']),
         ('share/' + package_name + '/worlds', ['worlds/nubot_world.sdf'])
+        ('share/' + package_name + '/launch', ['launch/simulate.launch.xml'])
     ],
     install_requires=['setuptools'],
     zip_safe=True,
