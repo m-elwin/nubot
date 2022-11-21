@@ -9,10 +9,10 @@ setup(
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
-        ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name, ['package.xml','urdf/nubot.urdf.xacro', 'config/nubot_urdf.rviz']),
         ('share/' + package_name + '/env-hooks', ['env-hooks/nubot.dsv']),
         ('share/' + package_name + '/worlds', ['worlds/nubot_world.sdf']),
-        ('share/' + package_name + '/launch', ['launch/simulate.launch.xml'])
+        ('share/' + package_name + '/launch', ['launch/simulate.launch.xml', 'launch/nubot_rviz.launch.py'])
     ],
     install_requires=['setuptools'],
     zip_safe=True,
