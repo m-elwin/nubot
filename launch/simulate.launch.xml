@@ -3,7 +3,7 @@
     <arg name="gz_args" value="nubot_world.sdf"/>
   </include>
 
-  <node pkg="ros_gz_bridge" exec="parameter_bridge" args="/model/vehicle_blue/odometry@nav_msgs/msg/Odometry[gz.msgs.Odometry /model/vehicle_blue/tf@tf2_msgs/msg/TFMessage[gz.msgs.Pose_V /model/vehicle_blue/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist" >
+  <node pkg="ros_gz_bridge" exec="parameter_bridge" args="/model/vehicle_blue/odometry@nav_msgs/msg/Odometry[gz.msgs.Odometry /model/vehicle_blue/tf@tf2_msgs/msg/TFMessage[gz.msgs.Pose_V /model/vehicle_blue/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist /lidar@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan" >
     <remap from="/model/vehicle_blue/odometry" to="/odom" />
     <remap from="/model/vehicle_blue/cmd_vel" to="/cmd_vel" />
     <remap from="/model/vehicle_blue/tf" to="/tf" />
