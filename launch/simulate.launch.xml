@@ -1,6 +1,8 @@
 <launch>
+  <arg name="use_rviz" default="false" />
   <include file="$(find-pkg-share nubot)/launch/nubot_rviz.launch.py">
     <arg name="use_jsp" value="none" />
+    <arg name="use_rviz" value="$(var use_rviz)" />
   </include>
 
   <include file="$(find-pkg-share nubot)/launch/world.launch.xml" />
