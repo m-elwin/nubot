@@ -1,5 +1,5 @@
 <robot name="nubot" xmlns:xacro="http://www.ros.org/wiki/xacro">
-      <link name="chassis">
+      <link name="base_link">
         <inertial>
           <origin xyz="-0.151427 -0 0.175" rpy="0 -0 0"/>
           <mass value="1.14395" />
@@ -134,26 +134,26 @@
 
       <joint name="lidar_sensor_joint" type="fixed">
         <origin xyz="0 0 0.5" rpy="0 0 0" />
-        <parent link="chassis" />
+        <parent link="base_link" />
         <child link="lidar_link" />
       </joint>
 
       <joint name="left_wheel_joint" type="continuous">
         <origin xyz="0.554283 0.625029 -0.025" rpy="-1.5707 0 0" />
-        <parent link="chassis" />
+        <parent link="base_link" />
         <child link="left_wheel" />
         <axis xyz="0 0 1" />
       </joint>
 
       <joint name="right_wheel_joint" type="continuous">
         <origin xyz="0.554283 -0.625029 -0.025" rpy="-1.5707 0 0" />
-        <parent link="chassis" />
+        <parent link="base_link" />
         <child link="right_wheel" />
         <axis xyz="0 0 1" />
       </joint>
 
       <joint name="caster_wheel" type="fixed">
-        <parent link="chassis" />
+        <parent link="base_link" />
         <child link="caster" />
       </joint>
 
