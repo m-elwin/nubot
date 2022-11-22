@@ -1,5 +1,4 @@
 <robot name="nubot" xmlns:xacro="http://www.ros.org/wiki/xacro">
-      <xacro:include filename="$(find nubot)/urdf/nubot.gazebo.xacro" />
       <link name="chassis">
         <inertial>
           <origin xyz="-0.151427 -0 0.175" rpy="0 -0 0"/>
@@ -160,4 +159,5 @@
         <child link="caster" />
       </joint>
 
+      <xacro:include filename="$(find nubot)/urdf/nubot.gazebo.xacro" />
 </robot>

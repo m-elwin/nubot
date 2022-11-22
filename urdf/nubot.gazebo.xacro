@@ -1,6 +1,7 @@
-<robot name="nubot" >
-    <gazebo link="lidar_link" >
-            <sensor name='gpu_lidar' type='gpu_lidar'>
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <gazebo reference="lidar_link" >
+        <sensor name='gpu_lidar' type='gpu_lidar'>
             <pose>0 0 0 0 0 0</pose>
             <topic>lidar</topic>
             <update_rate>10</update_rate>
@@ -21,7 +22,7 @@
             </lidar>
             <alwaysOn>1</alwaysOn>
             <visualize>true</visualize>
-            </sensor>
+        </sensor>
     </gazebo>
 
 
