@@ -5,7 +5,7 @@
 -->
 <sdf version="1.6">
   <world name="visualize_lidar_world">
-    <physics name="1ms" type="ignored">
+  <physics name="1ms" type="ignored">
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1.0</real_time_factor>
     </physics>
@@ -13,7 +13,7 @@
       filename="libignition-gazebo-physics-system.so"
       name="ignition::gazebo::systems::Physics">
     </plugin>
-    <plugin
+-   <plugin
       filename="libignition-gazebo-sensors-system.so"
       name="ignition::gazebo::systems::Sensors">
       <render_engine>ogre2</render_engine>
@@ -21,6 +21,10 @@
     <plugin
       filename="libignition-gazebo-scene-broadcaster-system.so"
       name="ignition::gazebo::systems::SceneBroadcaster">
+    </plugin>
+   <plugin
+    filename="ignition-gazebo-user-commands-system"
+    name="ignition::gazebo::systems::UserCommands">
     </plugin>
 
     <light type="directional" name="sun">
@@ -492,6 +496,5 @@
         <odom_publish_frequency>30</odom_publish_frequency>
       </plugin>
     </model>
-
   </world>
 </sdf>
