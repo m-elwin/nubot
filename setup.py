@@ -14,7 +14,7 @@ setup(
         ('share/' + package_name + '/urdf', ['urdf/nubot.urdf.xacro', 'urdf/nubot.gazebo.xacro']),
         ('share/' + package_name + '/env-hooks', ['env-hooks/nubot.dsv']),
         ('share/' + package_name + '/worlds', ['worlds/nubot_world.sdf']),
-        ('share/' + package_name + '/launch', ['launch/simulate.launch.xml', 'launch/nubot_rviz.launch.py'])
+        ('share/' + package_name + '/launch', ['launch/simulate.launch.xml', 'launch/world.launch.xml', 'launch/nubot_rviz.launch.py'])
     ],
     install_requires=['setuptools'],
     zip_safe=True,

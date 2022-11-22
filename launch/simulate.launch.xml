@@ -1,0 +1,9 @@
+<launch>
+  <include file="$(find-pkg-share nubot)/launch/nubot_rviz.launch.py">
+    <arg name="use_jsp" value="none" />
+  </include>
+
+  <include file="$(find-pkg-share nubot)/launch/world.launch.xml" />
+
+  <node pkg="ros_gz_sim" exec="create" args="-topic /robot_description -x 15" />
+</launch>
