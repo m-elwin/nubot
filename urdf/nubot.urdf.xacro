@@ -29,7 +29,7 @@
         </collision>
       </link>
 
-      <link name="lidar_link">
+      <link name="base_laser">
         <inertial>
           <mass value="0.1"/>
           <inertia
@@ -135,7 +135,7 @@
       <joint name="lidar_sensor_joint" type="fixed">
         <origin xyz="0 0 0.5" rpy="0 0 0" />
         <parent link="base_link" />
-        <child link="lidar_link" />
+        <child link="base_laser" />
       </joint>
 
       <joint name="left_wheel_joint" type="continuous">

@@ -82,7 +82,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        lidar_link:
+        base_laser:
           Alpha: 1
           Show Axes: false
           Show Trail: false
