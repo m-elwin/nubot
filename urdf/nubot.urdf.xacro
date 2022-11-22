@@ -31,7 +31,6 @@
 
       <link name="lidar_link">
         <inertial>
-        <origin xyz="0 0 0.5" rpy="0 0 0" />
           <mass value="0.1"/>
           <inertia
             ixx="0.000166667"
@@ -43,13 +42,11 @@
           />
         </inertial>
         <collision>
-        <origin xyz="0 0 0.5" rpy="0 0 0" />
           <geometry>
             <box size="0.1 0.1 0.1" />
           </geometry>
         </collision>
         <visual>
-        <origin xyz="0 0 0.5" rpy="0 0 0" />
           <geometry>
             <box size="0.1 0.1 0.1" />
           </geometry>
@@ -136,6 +133,7 @@
       </link>
 
       <joint name="lidar_sensor_joint" type="fixed">
+        <origin xyz="0 0 0.5" rpy="0 0 0" />
         <parent link="chassis" />
         <child link="lidar_link" />
       </joint>
