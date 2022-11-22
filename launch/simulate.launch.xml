@@ -7,5 +7,5 @@
 
   <include file="$(find-pkg-share nubot)/launch/world.launch.xml" />
 
-  <node pkg="ros_gz_sim" exec="create" args="-topic /robot_description -x 15" />
+  <node pkg="ros_gz_sim" exec="create" args="-topic /robot_description -x 15 -z 0.3" />
 </launch>
