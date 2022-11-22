@@ -1,8 +1,12 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <gazebo reference="lidar_link" >
-        <sensor name='gpu_lidar' type='gpu_lidar'>
-            <pose>0 0 0 0 0 0</pose>
+
+        <gazebo reference="lidar_sensor_joint">
+          <preserveFixedJoint>true</preserveFixedJoint>
+        </gazebo>
+
+        <gazebo reference="lidar_link" >
+          <sensor name='gpu_lidar' type='gpu_lidar'>
             <topic>lidar</topic>
             <update_rate>10</update_rate>
             <lidar>
@@ -13,6 +17,12 @@
                     <min_angle>-1.396263</min_angle>
                     <max_angle>1.396263</max_angle>
                 </horizontal>
+                <vertical>
+                  <samples>1</samples>
+                  <resolution>1</resolution>
+                  <min_angle>0</min_angle>
+                  <max_angle>0</max_angle>
+                </vertical>
                 </scan>
                 <range>
                 <min>0.08</min>
@@ -22,6 +32,7 @@
             </lidar>
             <alwaysOn>1</alwaysOn>
             <visualize>true</visualize>
+            <ignition_frame_id>lidar_link</ignition_frame_id>
         </sensor>
     </gazebo>
 
@@ -35,6 +46,8 @@
         <wheel_separation>1.25</wheel_separation>
         <wheel_radius>0.3</wheel_radius>
         <odom_publish_frequency>30</odom_publish_frequency>
+        <frame_id>odom</frame_id>
+        <child_frame_id>chassis</child_frame_id>
       </plugin>
 
       <plugin
