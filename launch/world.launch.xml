@@ -1,6 +1,7 @@
 <launch>
+  <arg name="world" default="nubot_world.sdf" />
   <include file="$(find-pkg-share ros_gz_sim)/launch/gz_sim.launch.py">
-    <arg name="gz_args" value="-r nubot_world.sdf"/>
+    <arg name="gz_args" value="-r $(var world)"/>
   </include>
 
   <node pkg="ros_gz_bridge" exec="parameter_bridge"
