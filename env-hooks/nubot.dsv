@@ -1,2 +1,2 @@
-prepend-non-duplicate;IGN_GAZEBO_RESOURCE_PATH;share/nubot/models
-prepend-non-duplicate;IGN_GAZEBO_RESOURCE_PATH;share/nubot/worlds
+prepend-non-duplicate;GZ_SIM_RESOURCE_PATH;share/nubot/models
+prepend-non-duplicate;GZ_SIM_RESOURCE_PATH;share/nubot/worlds
