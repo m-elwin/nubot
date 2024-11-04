@@ -5,8 +5,8 @@ Starts all the nodes to visualize a robot in rviz
 from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.actions import DeclareLaunchArgument
-from launch.substitutions import Command, PathJoinSubstitution, TextSubstitution, LaunchConfiguration
-from launch.conditions import IfCondition, LaunchConfigurationEquals
+from launch.substitutions import Command, EqualsSubstitution, PathJoinSubstitution, TextSubstitution, LaunchConfiguration
+from launch.conditions import IfCondition
 from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
@@ -19,11 +19,11 @@ def generate_launch_description():
 
         Node(package="joint_state_publisher_gui",
              executable="joint_state_publisher_gui",
-             condition= LaunchConfigurationEquals("use_jsp", "gui")
+             condition=IfCondition(EqualsSubstitution(LaunchConfiguration("use_jsp"), "gui"))
              ),
         Node(package="joint_state_publisher",
              executable="joint_state_publisher",
-             condition= LaunchConfigurationEquals("use_jsp", "jsp")
+             condition=IfCondition(EqualsSubstitution(LaunchConfiguration("use_jsp"), "jsp"))
              ),
         Node(
             package="robot_state_publisher",
@@ -41,6 +41,6 @@ def generate_launch_description():
             arguments=["-d",
                        PathJoinSubstitution(
                            [FindPackageShare("nubot"), "config", "nubot_urdf.rviz"])],
-            condition=LaunchConfigurationEquals("use_rviz", "true")
+            condition=IfCondition(EqualsSubstitution(LaunchConfiguration("use_rviz"), "true"))
             )
         ])
