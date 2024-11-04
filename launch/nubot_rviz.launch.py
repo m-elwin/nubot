@@ -41,6 +41,7 @@ def generate_launch_description():
             arguments=["-d",
                        PathJoinSubstitution(
                            [FindPackageShare("nubot"), "config", "nubot_urdf.rviz"])],
-            condition=IfCondition(EqualsSubstitution(LaunchConfiguration("use_rviz"), "true"))
+            condition=IfCondition(EqualsSubstitution(LaunchConfiguration("use_rviz"), "true")),
+            parameters=[{'use_sim_time': True}]
             )
         ])

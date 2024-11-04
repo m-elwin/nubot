@@ -9,7 +9,9 @@
               /model/nubot/tf@tf2_msgs/msg/TFMessage[gz.msgs.Pose_V
               /model/nubot/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist
               /scan@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan
-              /world/nubot_world/model/nubot/joint_state@sensor_msgs/msg/JointState[gz.msgs.Model" >
+              /world/nubot_world/model/nubot/joint_state@sensor_msgs/msg/JointState[gz.msgs.Model
+              /clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock"
+        >
     <remap from="/model/nubot/odometry" to="/odom" />
     <remap from="/model/nubot/cmd_vel" to="/cmd_vel" />
     <remap from="/model/nubot/tf" to="/tf" />
