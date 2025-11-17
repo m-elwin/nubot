@@ -10,5 +10,17 @@
     <arg name="world" value="$(var world)" />
   </include>
 
-  <node pkg="ros_gz_sim" exec="create" args="-topic /robot_description -x 15 -z 0.3" />
+  <gz_spawn_model
+      world=""
+      file=""
+      model_string=""
+      topic="/robot_description"
+      entity_name=""
+      allow_renaming="False"
+      x="15.0"
+      y="0.0"
+      z="0.3"
+      roll="0.0"
+      pitch="0.0"
+      yaw="0.0" />
 </launch>
