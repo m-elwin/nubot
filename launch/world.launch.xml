@@ -1,8 +1,13 @@
 <launch>
   <arg name="world" default="nubot_world.sdf" />
-  <include file="$(find-pkg-share ros_gz_sim)/launch/gz_sim.launch.py">
-    <arg name="gz_args" value="-r $(var world)"/>
-  </include>
+
+  <gz_server
+      world_sdf_file="$(var world)"
+      world_sdf_string=""
+      container_name="gazebo"
+      create_own_container="True"
+      use_composition="True" />
+  <executable cmd="gz sim -g" />
 
   <node pkg="ros_gz_bridge" exec="parameter_bridge"
         args="/model/nubot/odometry@nav_msgs/msg/Odometry[gz.msgs.Odometry
