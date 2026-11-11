@@ -25,7 +25,11 @@ setup(
     maintainer_email='elwin@northwestern.edu',
     description='A simulated robot with lidar',
     license='MIT',
-    tests_require=['pytest'],
+    extras_require={
+        'test': [
+            'pytest',
+            ],
+        },
     entry_points={
         'console_scripts': [
         ],
