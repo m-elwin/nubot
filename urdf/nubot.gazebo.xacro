@@ -7,7 +7,7 @@
 
         <gazebo reference="base_laser" >
           <sensor name='gpu_lidar' type='gpu_lidar'>
-            <alwaysOn>1</alwaysOn>
+            <always_on>1</always_on>
             <update_rate>10</update_rate>
             <visualize>true</visualize>
             <topic>scan</topic>
@@ -37,7 +37,7 @@
                   <stddev>0.001</stddev>
                 </noise>
             </lidar>
-            <gz_frame_id>base_laser</gz_frame_id>
+            <frame_id>base_laser</frame_id>
         </sensor>
     </gazebo>
 
