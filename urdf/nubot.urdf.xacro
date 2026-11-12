@@ -82,7 +82,7 @@
       </geometry>
       <material name="metal1" />
     </visual>
-    <collision name='collision'>
+    <collision>
       <geometry>
         <sphere radius="0.3" />
       </geometry>
@@ -107,7 +107,7 @@
       </geometry>
       <material name="metal1" />
     </visual>
-    <collision name='collision'>
+    <collision>
       <geometry>
         <sphere radius="0.3" />
       </geometry>
@@ -134,7 +134,7 @@
       </geometry>
       <material name="metal1" />
     </visual>
-    <collision name='collision'>
+    <collision>
       <origin xyz="-0.957138 -0 -0.125" rpy="0 -0 0" />
       <geometry>
         <sphere radius="0.2" />

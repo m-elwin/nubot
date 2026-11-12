@@ -5,6 +5,11 @@
           <preserveFixedJoint>true</preserveFixedJoint>
         </gazebo>
 
+        <gazebo reference="caster">
+          <mu1>0.0</mu1>
+          <mu2>0.0</mu2>
+        </gazebo>
+
         <gazebo reference="base_laser" >
           <sensor name='gpu_lidar' type='gpu_lidar'>
             <always_on>1</always_on>
